@@ -1,7 +1,7 @@
 pipeline {
   agent any
   environment {
-    GIT_REPO = 'https://github.com/YOURUSERNAME/projCert.git'
+    GIT_REPO = 'https://github.com/patilprem21/edu-Projcert.git'
     SLAVE = 'ubuntu@SLAVE_IP'
     SSH_CRED = 'slave-ssh-key'
   }
