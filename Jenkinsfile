@@ -2,7 +2,7 @@ pipeline {
   agent any
   environment {
     GIT_REPO = 'https://github.com/patilprem21/edu-Projcert.git'
-    SLAVE = 'ubuntu@SLAVE_IP'
+    SLAVE = 'ubuntu@65.0.93.189'
     SSH_CRED = 'slave-ssh-key'
   }
 
@@ -26,7 +26,7 @@ pipeline {
 
     stage('Job2: Install Docker via Ansible') {
       steps {
-        sh 'ansible-playbook -i SLAVE_IP, ansible/install_docker.yml --ssh-common-args="-o StrictHostKeyChecking=no" -u ubuntu'
+        sh 'ansible-playbook -i 65.0.93.189, ansible/install_docker.yml --ssh-common-args="-o StrictHostKeyChecking=no" -u ubuntu'
       }
     }
 
