@@ -2,14 +2,13 @@ pipeline {
   agent any
   environment {
     GIT_REPO = 'https://github.com/patilprem21/edu-Projcert.git'
-    SLAVE = 'ubuntu@65.0.93.189'
-    SSH_CRED = 'slave-ssh-key'
+    SLAVE_IP = '65.0.93.189'
   }
 
   stages {
     stage('Checkout') {
       steps {
-        git branch: 'master', url: env.GIT_REPO
+        git branch: 'main', url: env.GIT_REPO
       }
     }
 
